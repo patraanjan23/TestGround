@@ -1,0 +1,28 @@
+* {
+    background: none;
+}
+
+.QLineEdit {
+    color: black;
+    background: white;
+    min-height: 24px;
+    border: 1px solid black;
+    border-radius: 13px;
+}
+
+.QPushButton {
+    color: white;
+    background: black;
+    min-width: 128px;
+    min-height: 24px;
+}
+
+.QPushButton:flat {
+    border: 1px solid black;
+    border-radius: 13px;
+}
+
+.QPushButton:hover {
+    color: black;
+    background: white;
+}
