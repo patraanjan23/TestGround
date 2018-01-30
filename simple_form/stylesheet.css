@@ -1,12 +1,12 @@
 * {
-    background: none;
+    background: red;
 }
 
 .QLineEdit {
     color: black;
     background: white;
     min-height: 24px;
-    border: 1px solid black;
+    border: 1px solid red;
     border-radius: 13px;
 }
 
@@ -17,8 +17,9 @@
     min-height: 24px;
 }
 
+
 .QPushButton:flat {
-    border: 1px solid black;
+    border: none;
     border-radius: 13px;
 }
 

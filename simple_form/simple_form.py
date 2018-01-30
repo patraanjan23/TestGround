@@ -10,14 +10,18 @@ class SimpleForm(QtWidgets.QWidget, Ui_Form):
         super().__init__()
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setupUi(self)
+        self.setGeometry(64, 64, 640, 480)
 
         self.click_pt = QtCore.QPoint()
         self.drag_pt = QtCore.QPoint()
 
         self.stylesheet = "stylesheet.css"
-        with open(self.stylesheet) as stylesheet:
-            self.setStyleSheet(stylesheet.read())
-
+        try:
+            with open(self.stylesheet) as stylesheet:
+                self.setStyleSheet(stylesheet.read())
+        except FileNotFoundError:
+            print("{} not found, switching to default look".format(self.stylesheet))
+        
         self.btnExit.clicked.connect(self.exit_app)
         self.btnMax.clicked.connect(self.restore_app)
         self.btnMin.clicked.connect(self.minimize_app)
